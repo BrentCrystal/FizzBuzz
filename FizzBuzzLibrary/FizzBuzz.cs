@@ -6,7 +6,7 @@ namespace FizzBuzzLibrary
 {
     public static class FizzBuzz
     {
-        public static List<string> GetFizzBuzz()
+        public static List<string> RunBasicFizzBuzz()
         {
             List<string> output = new List<string>();
 

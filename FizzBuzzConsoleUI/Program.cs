@@ -8,7 +8,7 @@ namespace FizzBuzzConsoleUI
     {
         static void Main(string[] args)
         {
-            List<string> fizzBuzz = FizzBuzz.GetFizzBuzz();
+            List<string> fizzBuzz = FizzBuzz.RunBasicFizzBuzz();
 
             fizzBuzz.PrintFizzBuzz();
 
