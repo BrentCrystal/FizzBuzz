@@ -8,7 +8,7 @@ namespace FizzBuzzLibrary.Tests
     public class FizzBuzzTests
     {
         [Theory]
-        [InlineData("1","1")]
+        [InlineData("1")]
         [InlineData("2")]
         [InlineData("Fizz (3)")]
         [InlineData("4")]
@@ -23,20 +23,16 @@ namespace FizzBuzzLibrary.Tests
         [InlineData("13")]
         [InlineData("14")]
         [InlineData("FizzBuzz (15)")]
-        public void RunBasicFizzBuzzShouldReturnExpectedValue(string value, string expected)
+        public void RunBasicFizzBuzzShouldReturnExpectedValue(string expected)
         {
             //Arrange
-            string actual = "";
-            List<string> fizzBuzz = FizzBuzz.RunBasicFizzBuzz();
+            List<string> fizzBuzz = new List<string>();
 
             //Act
-            foreach (var f in fizzBuzz)
-            {
-                actual = f;
-            }
-
+            fizzBuzz = FizzBuzz.RunBasicFizzBuzz();
+            
             //Assert
-            Assert.Equal(expected, actual);
+            Assert.Contains(fizzBuzz, item => item == expected);
         }
 
     }
