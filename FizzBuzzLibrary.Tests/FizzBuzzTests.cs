@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Xunit;
 
@@ -32,7 +33,22 @@ namespace FizzBuzzLibrary.Tests
             fizzBuzz = FizzBuzz.RunBasicFizzBuzz();
             
             //Assert
-            Assert.Contains(fizzBuzz, item => item == expected);
+            Assert.Contains(fizzBuzz, value => value == expected);
+        }
+
+        [Fact]
+        public void RunElaborateFizzBuzzShouldReturnExpectedValue()
+        {
+            //Arrange
+            var expected = new List<string>();
+            expected.AddRange(new[]
+            {"1", "2", "Fizz", "4", "Buzz", "Fizz", "Jazz", "8", "Fizz", "Buzz", "11", "Fizz", "13", "Jazz", "FizzBuzz"});
+
+            //Act
+            var actual = FizzBuzz.RunElaborateFizzBuzz(1, 15);
+
+            //Assert
+            Assert.Equal(expected, actual);
         }
 
     }
