@@ -16,17 +16,17 @@ namespace FizzBuzzConsoleUI
     {
         static void Main(string[] args)
         {
-            int startIndex = UserMessage.GetIntegerFromUser("Enter integer to start index: i.e., 1 or -1");
+            int startIndex = UserMessage.GetIntegerFromUser("Enter a valid start index integer: i.e., 1 or -1");
             Console.WriteLine();
 
-            int endIndex = UserMessage.GetIntegerFromUser("Enter integer to end index: i.e., 100 or -100");
+            int endIndex = UserMessage.GetIntegerFromUser("Enter a valid end index integer: i.e., 100 or -100");
             Console.WriteLine();
 
-            //List<string> fizzBuzz = BasicFizzBuzz.RunBasicFizzBuzz();
+            //List<string> fizzBuzz = FizzBuzz.RunBasicFizzBuzz(); 
 
             List<string> fizzBuzz = FizzBuzz.RunElaborateFizzBuzz(startIndex, endIndex);
             
-            fizzBuzz.PrintFizzBuzz();
+            fizzBuzz.PrintFizzBuzzValues();
 
             Console.ReadLine();
         }

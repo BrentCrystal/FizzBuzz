@@ -12,6 +12,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzzConsoleUI", "FizzBu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzzLibrary.Tests", "FizzBuzzLibrary.Tests\FizzBuzzLibrary.Tests.csproj", "{C024CFB9-4986-4D80-938F-4B707F6C7036}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFFizzBuzzUI", "WPF_FizzBuzzUI\WPFFizzBuzzUI.csproj", "{B545581F-0241-4E13-AAEF-C3CBF2E05545}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{C024CFB9-4986-4D80-938F-4B707F6C7036}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C024CFB9-4986-4D80-938F-4B707F6C7036}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C024CFB9-4986-4D80-938F-4B707F6C7036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B545581F-0241-4E13-AAEF-C3CBF2E05545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B545581F-0241-4E13-AAEF-C3CBF2E05545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B545581F-0241-4E13-AAEF-C3CBF2E05545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B545581F-0241-4E13-AAEF-C3CBF2E05545}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

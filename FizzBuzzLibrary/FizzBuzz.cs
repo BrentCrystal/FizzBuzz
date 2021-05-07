@@ -86,14 +86,14 @@ namespace FizzBuzzLibrary
             (index: 7, value: "Jazz")
         };
 
-        private static IEnumerable<(int index, string value)> RunFizzBuzzRuleChecks(int index)
+        private static List<(int index, string value)> RunFizzBuzzRuleChecks(int index)
         {
-            var ruleChecks = FizzBuzzRules.Where(x => index % x.index == 0);
+            var ruleChecks = FizzBuzzRules.Where(x => index % x.index == 0).ToList();
             
             return ruleChecks;
         }
 
-        private static List<string> CreateFizzBuzzList(int index, IEnumerable<(int index, string value)> ruleChecks, List<string> output)
+        private static List<string> CreateFizzBuzzList(int index, List<(int index, string value)> ruleChecks, List<string> output)
         {
             if (index == 0)
             {
@@ -111,7 +111,7 @@ namespace FizzBuzzLibrary
             return output;
         }
 
-        public static void PrintFizzBuzz(this List<string> fizzBuzz)
+        public static void PrintFizzBuzzValues(this List<string> fizzBuzz)
         {
             foreach (var value in fizzBuzz)
             {
