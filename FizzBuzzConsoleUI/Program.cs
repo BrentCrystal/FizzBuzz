@@ -25,7 +25,7 @@ namespace FizzBuzzConsoleUI
             //List<string> fizzBuzz = FizzBuzz.RunBasicFizzBuzz(); 
 
             List<string> fizzBuzz = FizzBuzz.RunElaborateFizzBuzz(startIndex, endIndex);
-            
+
             fizzBuzz.PrintFizzBuzzValues();
 
             Console.ReadLine();

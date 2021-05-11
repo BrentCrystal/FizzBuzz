@@ -13,6 +13,10 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -20,12 +24,64 @@
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="2">
-            <TextBlock >Start Index</TextBlock>
-            <TextBox x:Name="startIndex" MinWidth="200"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="1" Margin="0 5 20 5" >
+            <TextBlock Margin="0 0 5 0">Start Index:</TextBlock>
+            <TextBox x:Name="startIndexText" Text="Enter Integer" Tag="Enter Integer" TextAlignment="Center" Padding="0 5 0 5" 
+                     FontSize="14" MinWidth="105" MaxWidth="200" GotFocus="ClearTextBoxDefaultText_GotFocus"/>
         </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="2" Margin="0 5 20 5" >
+            <TextBlock Margin="0 0 5 0">End Index:</TextBlock>
+            <TextBox x:Name="endIndexText" Text="Enter Integer" Tag="Enter Integer" TextAlignment="Center" Padding="0 5 0 5" 
+                     FontSize="14" MinWidth="105" MaxWidth="200" GotFocus="ClearTextBoxDefaultText_GotFocus"/>
+        </StackPanel>
+
+        <Button x:Name="runFizzBuzz" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="10 5 10 5" Padding="8 0 8 0"
+                Click="RunFizzBuzz_Click">Run FizzBuzz</Button>
+
+        <TextBlock FontSize="16" Grid.Column="0" Grid.Row="3" Margin="30 10 0 0">Rules List</TextBlock>
+        <ListBox x:Name="rulesListBox" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="30 5 10 5" Height="50" FontSize="18">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <TextBlock FontSize="16" Grid.Column="0" Grid.Row="5" Margin="30 10 0 0">New Rule</TextBlock>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"  Grid.Column="0" Grid.Row="6">
+            <TextBox x:Name="addIntegerText" Text="Enter Integer" Tag="Enter Integer" TextAlignment="Center" Padding="0 5 0 5" 
+                     FontSize="14" MinWidth="105" MaxWidth="200" Margin="30 5 5 5" GotFocus="ClearTextBoxDefaultText_GotFocus"/>
+            <TextBox x:Name="addStringText" Text="Enter String" Tag="Enter String" TextAlignment="Center" Padding="0 5 0 5" 
+                     FontSize="14" MinWidth="105" MaxWidth="200" Margin="5 5 5 5" GotFocus="ClearTextBoxDefaultText_GotFocus"/>
+        </StackPanel>
+
+        <Button x:Name="addRule" Grid.Column="1" Grid.Row="6" Margin="10 5 10 5"
+                Click="AddFizzBuzzRule_Click">Add Rule</Button>
+
+        <TextBlock FontSize="16" Grid.Column="0" Grid.Row="7" Margin="30 10 0 0">Existing Rule</TextBlock>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"  Grid.Column="0" Grid.Row="8">
+            <TextBox x:Name="deleteIntegerText" Text="Enter Integer" Tag="Enter Integer" TextAlignment="Center" Padding="0 5 0 5" 
+                     FontSize="14" MinWidth="105" MaxWidth="200" Margin="30 5 5 5" GotFocus="ClearTextBoxDefaultText_GotFocus"/>
+            <TextBox x:Name="deleteStringText" Text="Enter String" Tag="Enter String" TextAlignment="Center" Padding="0 5 0 5" 
+                     FontSize="14" MinWidth="105" MaxWidth="200" Margin="5 5 5 5" GotFocus="ClearTextBoxDefaultText_GotFocus"/>
+        </StackPanel>
+
+        <Button x:Name="DeleteRule" Grid.Column="1" Grid.Row="8" Margin="10 5 10 5"
+                Click="DeleteFizzBuzzRule_Click">Delete Rule</Button>
+
+        <TextBlock FontSize="16" Grid.Column="4" Grid.Row="0" Margin="20 10 0 0">FizzBuzz List</TextBlock>
+        <ListBox x:Name="fizzBuzzListBox" Grid.Row="1" Grid.RowSpan="8"  Grid.Column="4" Grid.ColumnSpan="2" Margin="20 5 30 5" MaxHeight="350">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+       
     </Grid>
 </Window>

@@ -105,7 +105,7 @@ namespace FizzBuzzLibrary
             }
             else
             {
-                output.Add(string.Join("", ruleChecks.Select(x => x.value)));
+                output.Add(string.Join("", ruleChecks.Select(x => x.value)) + $" ({index})");
             }
 
             return output;
